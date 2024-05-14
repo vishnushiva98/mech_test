@@ -3,20 +3,32 @@ import 'package:flutter/material.dart';
 class WidgetThree extends StatelessWidget {
   // const WidgetThree({super.key});
   IconData widgetIconThree;
-   WidgetThree({required this.widgetIconThree});
+  WidgetThree({required this.widgetIconThree});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 40,
       height: 40,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(8)),
-        color: const Color.fromARGB(255, 224, 223, 223),
-      ),
-      child: Icon(
-        widgetIconThree,
-        color: Color.fromARGB(255, 151, 151, 151),
+      child: IconButton(
+        onPressed: () {},
+        icon: Icon(
+          widgetIconThree,
+        ),
+        alignment: Alignment.center,
+        style: ButtonStyle(
+          iconSize: MaterialStateProperty.all(22),
+          backgroundColor: MaterialStateProperty.all(
+            Color.fromARGB(223, 221, 220, 220),
+          ),
+          shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(9),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
