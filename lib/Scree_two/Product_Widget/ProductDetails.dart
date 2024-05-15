@@ -37,11 +37,14 @@ class ScondScreenOne extends StatelessWidget {
             ),
           ],
         ),
-        WidgetOne(
-          firstText: 'Avaliable in stock',
-          firstsize: FontWeight.w700,
-          firstColor: Color.fromARGB(255, 79, 78, 78),
-          firstFontSize: 12,
+        Padding(
+          padding: const EdgeInsets.only(right: 20.0),
+          child: WidgetOne(
+            firstText: 'Avaliable in stock',
+            firstsize: FontWeight.w700,
+            firstColor: Color.fromARGB(255, 79, 78, 78),
+            firstFontSize: 12,
+          ),
         ),
       ],
     );

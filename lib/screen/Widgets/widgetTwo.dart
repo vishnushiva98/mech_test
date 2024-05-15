@@ -55,7 +55,7 @@ class WidgetTwo extends StatelessWidget {
         ),
         Positioned(
             right: 0,
-            top: 30,
+            top: 10,
             child: Image.asset(
               imageTwo,
               width: 120,

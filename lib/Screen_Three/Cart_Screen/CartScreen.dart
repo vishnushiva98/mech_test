@@ -1,6 +1,6 @@
 import 'package:e_comerce_application_2/Assets/assetsimage.dart';
+import 'package:e_comerce_application_2/Scree_two/Product_Widget/BouttonWidget.dart';
 import 'package:e_comerce_application_2/Screen_Three/Cart_Widget/cartWidgetOne.dart';
-import 'package:e_comerce_application_2/Widget_two/SecondScreenthree.dart';
 import 'package:e_comerce_application_2/screen/Widgets/widgetOne.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +28,7 @@ class CartScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 20.0, right: 20),
+        padding: const EdgeInsets.only(left: 20.0, right: 20, top: 20),
         child: ListView(
           children: [
             CartWidgetOne(
