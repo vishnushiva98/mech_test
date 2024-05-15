@@ -27,81 +27,101 @@ class CartScreen extends StatelessWidget {
           // tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(left: 20.0, right: 20, top: 20),
-        child: ListView(
-          children: [
-            CartWidgetOne(
-              cartImage: appleWatchFor,
-              cartBrand: 'Apple Watch SEries',
-              cartPruductSize: 'Size :36',
-              cartRate: '\$140',
-              carColor: const Color.fromARGB(255, 255, 211, 144),
-            ),
-            Divider(
-              height: 13,
-              color: Colors.transparent,
-            ),
-            CartWidgetOne(
-              cartImage: headPhone,
-              cartBrand: 'Sony ear headphone',
-              cartPruductSize: 'Size :m',
-              cartRate: '\$50',
-              carColor: Color.fromRGBO(218, 249, 244, 1),
-            ),
-            Divider(
-              height: 13,
-              color: Colors.transparent,
-            ),
-            CartWidgetOne(
-              cartImage: tshirtOne,
-              cartBrand: "Levi's T-Shirt",
-              cartPruductSize: 'Size :5',
-              cartRate: '\$40',
-              carColor: Color.fromARGB(255, 255, 239, 188),
-            ),
-            Divider(
-              height: 13,
-              color: Colors.transparent,
-            ),
-            CartWidgetOne(
-              cartImage: nikeShoeTwo,
-              cartBrand: 'Nike womenshoes',
-              cartPruductSize: 'Size :40',
-              cartRate: '\$70',
-              carColor: Color.fromARGB(255, 163, 163, 163),
-            ),
-            Divider(
-              height: 80,
-              color: Colors.transparent,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: Stack(children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 20.0, right: 20, top: 20),
+          child: ListView(
+            children: [
+              CartWidgetOne(
+                cartImage: appleWatchFor,
+                cartBrand: 'Apple Watch SEries',
+                cartPruductSize: 'Size :36',
+                cartRate: '\$140',
+                carColor: const Color.fromARGB(255, 255, 211, 144),
+              ),
+              Divider(
+                height: 13,
+                color: Colors.transparent,
+              ),
+              CartWidgetOne(
+                cartImage: headPhone,
+                cartBrand: 'Sony ear headphone',
+                cartPruductSize: 'Size :m',
+                cartRate: '\$50',
+                carColor: Color.fromRGBO(218, 249, 244, 1),
+              ),
+              Divider(
+                height: 13,
+                color: Colors.transparent,
+              ),
+              CartWidgetOne(
+                cartImage: tshirtOne,
+                cartBrand: "Levi's T-Shirt",
+                cartPruductSize: 'Size :5',
+                cartRate: '\$40',
+                carColor: Color.fromARGB(255, 255, 239, 188),
+              ),
+              Divider(
+                height: 13,
+                color: Colors.transparent,
+              ),
+              CartWidgetOne(
+                cartImage: nikeShoeTwo,
+                cartBrand: 'Nike womenshoes',
+                cartPruductSize: 'Size :40',
+                cartRate: '\$70',
+                carColor: Color.fromARGB(255, 163, 163, 163),
+              ),
+              Divider(
+                height: 80,
+                color: Colors.transparent,
+              ),
+            ],
+          ),
+        ),
+        Positioned(
+          bottom: 0,
+          child: Container(
+            color: Colors.white,
+            width: MediaQuery.of(context).size.width / 1,
+            // height: MediaQuery.of(context).size.height / 15,
+            padding: EdgeInsets.only(bottom: 30, top: 5),
+            child: Column(
               children: [
-                WidgetOne(
-                  firstText: 'Total',
-                  firstsize: FontWeight.w600,
-                  firstColor: Colors.black,
-                  firstFontSize: 18,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      WidgetOne(
+                        firstText: 'Total',
+                        firstsize: FontWeight.w600,
+                        firstColor: Colors.black,
+                        firstFontSize: 18,
+                      ),
+                      WidgetOne(
+                        firstText: '\$300',
+                        firstsize: FontWeight.w800,
+                        firstColor: Colors.orange,
+                        firstFontSize: 18,
+                      ),
+                    ],
+                  ),
                 ),
-                WidgetOne(
-                  firstText: '\$300',
-                  firstsize: FontWeight.w800,
-                  firstColor: Colors.orange,
-                  firstFontSize: 18,
+                Divider(
+                  height: 15,
+                  color: Colors.transparent,
+                ),
+                Container(
+                  child: WidgetButton(
+                    buttonText: 'Buy Now',
+                  ),
                 ),
               ],
             ),
-            Divider(
-              height: 20,
-              color: Colors.transparent,
-            ),
-            WidgetButton(
-              buttonText: 'Buy Now',
-            ),
-          ],
+          ),
         ),
-      ),
+      ]),
     );
   }
 }

@@ -16,13 +16,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: BootomNavBar(),
+      // home: HomePage(),
       // home: CartScreen(),
-      // home: ProductDetiles(),
+
       routes: {
-       
         'productdetailes': (context) => ProductDetiles(),
         'cartscreen': (context) => CartScreen(),
       },
     );
   }
 }
+// home: CartScreen(),
+      // home: ProductDetiles(),
+  
