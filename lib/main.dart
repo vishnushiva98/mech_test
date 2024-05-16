@@ -1,3 +1,4 @@
+import 'package:e_comerce_application_2/Json.dart';
 
 import 'package:e_comerce_application_2/Scree_two/Product_Sreen/HomeProduct.dart';
 import 'package:e_comerce_application_2/Screen_Three/Cart_Screen/CartScreen.dart';
@@ -15,9 +16,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BootomNavBar(),
-      // home: HomePage(),
-      // home: CartScreen(),
+      // home: BootomNavBar(),
+      home: ProductListPage(),
 
       routes: {
         'productdetailes': (context) => ProductDetiles(),
