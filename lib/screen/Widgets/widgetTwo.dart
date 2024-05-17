@@ -1,11 +1,12 @@
 // import 'package:e_comerce_application_2/Assets/assetsimage.dart';
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:e_comerce_application_2/screen/Widgets/widgetOne.dart';
 import 'package:flutter/material.dart';
 
 class WidgetTwo extends StatelessWidget {
   // const WidgetTwo({super.key});
-final  String imageTwo;
- final Color secondWgtColor;
+  final String imageTwo;
+  final Color secondWgtColor;
 
   WidgetTwo({
     required this.imageTwo,
@@ -44,7 +45,7 @@ final  String imageTwo;
                     child: WidgetOne(
                         firstText: "Get Now",
                         firstsize: FontWeight.bold,
-                        firstColor: Colors.orangeAccent,
+                        firstColor: primeColor,
                         firstFontSize: 15),
                     style: ButtonStyle(elevation: MaterialStateProperty.all(0)),
                   ),

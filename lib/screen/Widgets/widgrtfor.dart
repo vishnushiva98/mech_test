@@ -1,3 +1,4 @@
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:e_comerce_application_2/screen/Widgets/widgetOne.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,7 @@ class _WidgetForState extends State<WidgetFor> {
       // width: MediaQuery.of(context).size.width / 2.3,
       // height: MediaQuery.of(context).size.height / 1,
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 230, 230, 230),
+          color: secondery,
           borderRadius: BorderRadius.all(Radius.circular(15))),
       child: Column(
         children: [
@@ -123,7 +124,7 @@ class _WidgetForState extends State<WidgetFor> {
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
                             decoration: TextDecoration.lineThrough,
-                            color: Colors.grey),
+                            color: seconderyInner),
                       ),
                     ],
                   )

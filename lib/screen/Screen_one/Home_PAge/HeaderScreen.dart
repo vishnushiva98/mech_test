@@ -1,3 +1,4 @@
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:e_comerce_application_2/screen/Widgets/widgetOne.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +34,7 @@ class HeaderScreen extends StatelessWidget {
               WidgetOne(
                 firstText: "Lets gets somthing\?",
                 firstsize: FontWeight.bold,
-                firstColor: Color.fromARGB(255, 202, 201, 201),
+                firstColor:seconderyText ,
                 firstFontSize: 14,
               ),
             ],

@@ -1,4 +1,5 @@
 import 'package:e_comerce_application_2/Assets/assetsimage.dart';
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:e_comerce_application_2/screen/Widgets/widgetTwo.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class _OffersScreenState extends State<OffersScreen> {
           children: [
             WidgetTwo(
               imageTwo: homeImage,
-              secondWgtColor: Color.fromARGB(255, 247, 114, 5),
+              secondWgtColor:primeColor ,
             ),
             // const Spacer(),
             Divider(
@@ -28,7 +29,7 @@ class _OffersScreenState extends State<OffersScreen> {
             ),
             WidgetTwo(
               imageTwo: homeImageFor,
-              secondWgtColor: Colors.blue,
+              secondWgtColor: primeBlue,
             ),
             Divider(
               endIndent: 10,

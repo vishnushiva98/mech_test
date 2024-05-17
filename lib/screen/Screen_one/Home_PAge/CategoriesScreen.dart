@@ -1,3 +1,4 @@
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:e_comerce_application_2/screen/Widgets/widgetOne.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class CategoriesScreen extends StatelessWidget {
           WidgetOne(
             firstText: "SEE ALL",
             firstsize: FontWeight.w800,
-            firstColor: Color.fromARGB(255, 247, 114, 5),
+            firstColor: primeColor,
             firstFontSize: 12,
           )
         ],

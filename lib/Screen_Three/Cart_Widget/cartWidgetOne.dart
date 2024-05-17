@@ -1,4 +1,4 @@
-import 'package:e_comerce_application_2/Assets/assetsimage.dart';
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:flutter/material.dart';
 
 class CartWidgetOne extends StatelessWidget {
@@ -21,7 +21,7 @@ class CartWidgetOne extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height / 7,
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 240, 240, 240),
+          color:secondery ,
           borderRadius: BorderRadius.all(Radius.circular(10))),
       child: Row(
         children: [
@@ -93,7 +93,7 @@ class CartWidgetOne extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w600,
-                                color: Colors.orange),
+                                color: primeColor),
                           ),
                           Text(
                             "1",
@@ -107,7 +107,7 @@ class CartWidgetOne extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600,
-                                color: Colors.orange),
+                                color:primeColor),
                           ),
                         ],
                       ),

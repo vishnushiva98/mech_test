@@ -1,4 +1,5 @@
 import 'package:e_comerce_application_2/Assets/assetsimage.dart';
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:e_comerce_application_2/Scree_two/Product_Widget/BouttonWidget.dart';
 import 'package:e_comerce_application_2/Screen_Three/Cart_Widget/cartWidgetOne.dart';
 import 'package:e_comerce_application_2/screen/Widgets/widgetOne.dart';
@@ -37,7 +38,7 @@ class CartScreen extends StatelessWidget {
                 cartBrand: 'Apple Watch SEries',
                 cartPruductSize: 'Size :36',
                 cartRate: '\$140',
-                carColor: const Color.fromARGB(255, 255, 211, 144),
+                carColor:cartColorOne ,
               ),
               Divider(
                 height: 13,
@@ -48,7 +49,7 @@ class CartScreen extends StatelessWidget {
                 cartBrand: 'Sony ear headphone',
                 cartPruductSize: 'Size :m',
                 cartRate: '\$50',
-                carColor: Color.fromRGBO(218, 249, 244, 1),
+                carColor: cartColorTwo,
               ),
               Divider(
                 height: 13,
@@ -59,7 +60,7 @@ class CartScreen extends StatelessWidget {
                 cartBrand: "Levi's T-Shirt",
                 cartPruductSize: 'Size :5',
                 cartRate: '\$40',
-                carColor: Color.fromARGB(255, 255, 239, 188),
+                carColor: cartColorThree,
               ),
               Divider(
                 height: 13,
@@ -70,7 +71,7 @@ class CartScreen extends StatelessWidget {
                 cartBrand: 'Nike womenshoes',
                 cartPruductSize: 'Size :40',
                 cartRate: '\$70',
-                carColor: Color.fromARGB(255, 163, 163, 163),
+                carColor: cartColorFor,
               ),
               Divider(
                 height: 80,
@@ -102,7 +103,7 @@ class CartScreen extends StatelessWidget {
                       WidgetOne(
                         firstText: '\$300',
                         firstsize: FontWeight.w800,
-                        firstColor: Colors.orange,
+                        firstColor: primeColor,
                         firstFontSize: 18,
                       ),
                     ],

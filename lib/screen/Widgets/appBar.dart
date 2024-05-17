@@ -1,9 +1,10 @@
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:flutter/material.dart';
 
 class AppBarWidget extends StatelessWidget {
   // const AppBarWidget({super.key});
 
- final IconData appBarIcon;
+  final IconData appBarIcon;
 
   AppBarWidget({required this.appBarIcon});
 
@@ -24,7 +25,7 @@ class AppBarWidget extends StatelessWidget {
           style: ButtonStyle(
             iconSize: MaterialStateProperty.all(18),
             backgroundColor: MaterialStateProperty.all(
-              Color.fromARGB(223, 221, 220, 220),
+              secondery,
             ),
             shape: MaterialStateProperty.all(
               RoundedRectangleBorder(

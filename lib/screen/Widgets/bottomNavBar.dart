@@ -1,3 +1,4 @@
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:e_comerce_application_2/Screen_Three/Cart_Screen/CartScreen.dart';
 import 'package:e_comerce_application_2/screen/Screen_one/Home_PAge/FirstScreen.dart';
 
@@ -28,9 +29,9 @@ class _BootomNavBarState extends State<BootomNavBar> {
       bottomNavigationBar: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
         child: GNav(
-          color: Colors.grey,
-          activeColor: Color.fromARGB(219, 235, 141, 0),
-          tabBackgroundColor: Color.fromARGB(255, 255, 237, 210),
+          color: seconderyInner,
+          activeColor: primeColor,
+          tabBackgroundColor: primeLite,
           gap: 8,
           padding: EdgeInsets.all(10),
           tabBorderRadius: 10,

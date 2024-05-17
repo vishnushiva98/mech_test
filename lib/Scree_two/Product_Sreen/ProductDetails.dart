@@ -1,9 +1,9 @@
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:e_comerce_application_2/Scree_two/Product_Widget/BouttonWidget.dart';
 import 'package:e_comerce_application_2/Scree_two/Product_Widget/ProductDetails.dart';
 import 'package:e_comerce_application_2/Scree_two/Product_Widget/ProductScreenRow.dart';
 import 'package:e_comerce_application_2/screen/Widgets/widgetOne.dart';
 import 'package:flutter/material.dart';
-
 
 class ProductDetailsScreen extends StatelessWidget {
   // const ProductDetailsScreen({super.key});
@@ -11,12 +11,14 @@ class ProductDetailsScreen extends StatelessWidget {
   final String productTitle;
   final String productNewRate;
   final String productDescription;
+  final String productRatting;
 
   const ProductDetailsScreen({
     super.key,
     required this.productTitle,
     required this.productNewRate,
     required this.productDescription,
+    required this.productRatting,
   });
 
   @override
@@ -48,30 +50,24 @@ class ProductDetailsScreen extends StatelessWidget {
             children: [
               const Icon(
                 Icons.star,
-                color: Color.fromARGB(225, 241, 214, 2),
+                color: Color.fromRGBO(255, 193, 7, 1),
               ),
               const Icon(
                 Icons.star,
-                color: Color.fromARGB(225, 241, 214, 2),
+                color: Color.fromRGBO(255, 193, 7, 1),
               ),
               const Icon(
                 Icons.star,
-                color: Color.fromARGB(225, 241, 214, 2),
+                color: Color.fromRGBO(255, 193, 7, 1),
               ),
-              const Icon(
-                Icons.star,
-                color: Color.fromARGB(225, 241, 214, 2),
-              ),
-              const Icon(
-                Icons.star,
-                color: Color.fromARGB(225, 241, 214, 2),
-              ),
+              const Icon(Icons.star, color: Color.fromRGBO(255, 193, 7, 1)),
+              const Icon(Icons.star, color: Color.fromRGBO(255, 193, 7, 1)),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0),
                 child: WidgetOne(
-                  firstText: '(4500 Reviews) ',
+                  firstText: productRatting,
                   firstsize: FontWeight.w500,
-                  firstColor: Color.fromARGB(255, 79, 78, 78),
+                  firstColor: seconderyText,
                   firstFontSize: 12,
                 ),
               ),
@@ -91,25 +87,30 @@ class ProductDetailsScreen extends StatelessWidget {
           ),
           Row(
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 10.0),
-                    child: WidgetOne(
-                      firstText: 'About',
-                      firstsize: FontWeight.w700,
-                      firstColor: Color.fromARGB(255, 79, 78, 78),
-                      firstFontSize: 15,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 10.0),
+                      child: WidgetOne(
+                        firstText: 'About',
+                        firstsize: FontWeight.w700,
+                        firstColor: Colors.black,
+                        firstFontSize: 15,
+                      ),
                     ),
-                  ),
-                  WidgetOne(
-                    firstText: productDescription,
-                    firstsize: FontWeight.w600,
-                    firstColor: Color.fromARGB(255, 79, 78, 78),
-                    firstFontSize: 12,
-                  ),
-                ],
+                    Text(
+                      productDescription,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 4,
+                      style: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
               )
             ],
           ),

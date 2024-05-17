@@ -1,3 +1,4 @@
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:flutter/material.dart';
 
 class WidgetButton extends StatelessWidget {
@@ -22,7 +23,7 @@ class WidgetButton extends StatelessWidget {
           padding: MaterialStateProperty.all(
               EdgeInsets.symmetric(vertical: 14, horizontal: 134)),
           backgroundColor:
-              MaterialStateProperty.all(Color.fromARGB(209, 250, 123, 18))),
+              MaterialStateProperty.all(primeColor)),
     );
   }
 }

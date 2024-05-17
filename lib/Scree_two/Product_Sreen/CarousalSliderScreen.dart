@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_comerce_application_2/Assets/assetsimage.dart';
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:e_comerce_application_2/Scree_two/Product_Widget/CarouslSliderWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -56,8 +57,7 @@ class _CArosulSliderScreenState extends State<CArosulSliderScreen> {
         dotWidth: 13,
         dotHeight: 13,
         dotColor: Colors.white,
-        activeDotColor: Color.fromARGB(233, 255, 176, 56),
-      ),
+        activeDotColor: primeColor,)
     );
   }
 }

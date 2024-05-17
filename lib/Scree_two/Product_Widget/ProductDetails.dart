@@ -42,7 +42,7 @@ class ScondScreenOne extends StatelessWidget {
           child: WidgetOne(
             firstText: 'Avaliable in stock',
             firstsize: FontWeight.w700,
-            firstColor: Color.fromARGB(255, 79, 78, 78),
+            firstColor: Colors.black,
             firstFontSize: 12,
           ),
         ),

@@ -1,3 +1,4 @@
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:flutter/material.dart';
 
 class WidgetThree extends StatefulWidget {
@@ -24,14 +25,13 @@ class _WidgetThreeState extends State<WidgetThree> {
         },
         icon: Icon(
           widget.widgetIconThree,
+          color: seconderyInner,
         ),
         alignment: Alignment.center,
         style: ButtonStyle(
           iconSize: MaterialStateProperty.all(22),
           backgroundColor: MaterialStateProperty.all(
-            isPressed
-                ? const Color.fromARGB(255, 255, 212, 147)
-                : Color.fromARGB(247, 235, 235, 235),
+            isPressed ? primeLite : secondery,
           ),
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(

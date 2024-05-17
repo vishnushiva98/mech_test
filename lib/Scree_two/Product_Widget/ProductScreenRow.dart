@@ -1,3 +1,4 @@
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:flutter/material.dart';
 
 class SecondRow extends StatefulWidget {
@@ -23,11 +24,11 @@ class _SecondRowState extends State<SecondRow> {
       child: Container(
         decoration: BoxDecoration(
             color:
-                isPressed ? Color.fromARGB(255, 255, 229, 211) : Colors.white,
+                isPressed ? primeLite : Colors.white,
             border: Border.all(
               color: isPressed
-                  ? Color.fromARGB(255, 255, 229, 211)
-                  : const Color.fromARGB(255, 208, 208, 208),
+                  ? primeLite
+                  :secondery ,
             ),
             borderRadius: BorderRadius.all(Radius.circular(10))),
         width: 45,

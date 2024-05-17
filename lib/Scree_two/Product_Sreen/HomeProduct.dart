@@ -1,3 +1,4 @@
+import 'package:e_comerce_application_2/Assets/color/colors.dart';
 import 'package:e_comerce_application_2/Models/jsonModel.dart';
 import 'package:e_comerce_application_2/Scree_two/Product_Sreen/ProductCarousal.dart';
 import 'package:e_comerce_application_2/Scree_two/Product_Sreen/ProductDetails.dart';
@@ -15,7 +16,7 @@ class ProductDetiles extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 29,
-        backgroundColor: Color.fromARGB(255, 230, 228, 228),
+        backgroundColor: secondery,
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
@@ -36,7 +37,8 @@ class ProductDetiles extends StatelessWidget {
           ProductDetailsScreen(
             productTitle: product.title,
             productNewRate: '\$${product.price}',
-            productDescription: product.category.toString(),
+            productDescription: product.description.toString(),
+            productRatting: '${product.rating.rate}',
           ),
         ],
       ),
