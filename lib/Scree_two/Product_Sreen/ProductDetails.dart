@@ -4,6 +4,7 @@ import 'package:e_comerce_application_2/Scree_two/Product_Widget/ProductScreenRo
 import 'package:e_comerce_application_2/screen/Widgets/widgetOne.dart';
 import 'package:flutter/material.dart';
 
+
 class ProductDetailsScreen extends StatelessWidget {
   // const ProductDetailsScreen({super.key});
 
@@ -26,12 +27,17 @@ class ProductDetailsScreen extends StatelessWidget {
         children: [
           Row(
             children: [
-              WidgetOne(
-                firstText: productTitle,
-                firstsize: FontWeight.w700,
-                firstColor: Colors.black,
-                firstFontSize: 18,
-              ),
+              Expanded(
+                child: Text(
+                  productTitle,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 2,
+                  style: const TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              )
             ],
           ),
           const Divider(
@@ -97,17 +103,12 @@ class ProductDetailsScreen extends StatelessWidget {
                       firstFontSize: 15,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 5.0),
-                    child: Text(
-                      productDescription,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  )
+                  WidgetOne(
+                    firstText: productDescription,
+                    firstsize: FontWeight.w600,
+                    firstColor: Color.fromARGB(255, 79, 78, 78),
+                    firstFontSize: 12,
+                  ),
                 ],
               )
             ],

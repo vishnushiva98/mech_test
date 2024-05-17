@@ -1,3 +1,4 @@
+import 'package:e_comerce_application_2/Screen_Three/Cart_Screen/CartScreen.dart';
 import 'package:e_comerce_application_2/screen/Screen_one/Home_PAge/FirstScreen.dart';
 
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class _BootomNavBarState extends State<BootomNavBar> {
     HomeOne(),
     Container(),
 
-    Container(),
+    CartScreen(),
     Container(),
     // Container(),
   ];

@@ -35,40 +35,40 @@ class _ProductCategariesState extends State<ProductCategaries> {
         ? Center(
             child: CircularProgressIndicator(),
           )
-        : Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(
-                left: 20.0,
-                right: 20,
-              ),
-              child: GridView.builder(
-                itemCount: products.length,
-                itemBuilder: (context, index) {
-                  return Container(
-                    // padding: EdgeInsets.all(0),
+        : Padding(
+            padding: const EdgeInsets.only(
+              left: 20.0,
+              right: 20,
+            ),
+            child: GridView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: products.length,
+              itemBuilder: (context, index) {
+                return Container(
+                  // padding: EdgeInsets.all(0),
 
-                    child: WidgetFor(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ProductDetiles(
-                                      product: products[index],
-                                    )));
-                      },
-                      proudectName: products[index].title,
-                      widgetForImage: products[index].image,
-                      prouductNewRate: '\$${products[index].price}',
-                      prouductOldRate: '\$200', //${products[index].rating}
-                    ),
-                  );
-                },
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  mainAxisExtent: 290,
-                ),
+                  child: WidgetFor(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProductDetiles(
+                                    product: products[index],
+                                  )));
+                    },
+                    proudectName: products[index].title,
+                    widgetForImage: products[index].image,
+                    prouductNewRate: '\$${products[index].price}',
+                    prouductOldRate: '\$200', //${products[index].rating}
+                  ),
+                );
+              },
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                mainAxisExtent: 290,
               ),
             ),
           );

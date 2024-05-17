@@ -18,15 +18,18 @@ class _HomeOneState extends State<HomeOne> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Column(
-        children:  [
-          AppBarScreen(),
-          HeaderScreen(),
-          OffersScreen(),
-          CategoriesScreen(),
-          CategoriesType(),
-          ProductCategaries(),
-        ],
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            AppBarScreen(),
+            HeaderScreen(),
+            OffersScreen(),
+            CategoriesScreen(),
+            CategoriesType(),
+            ProductCategaries(),
+          ],
+        ),
       ),
     );
   }
