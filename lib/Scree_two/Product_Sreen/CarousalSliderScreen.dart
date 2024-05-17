@@ -5,7 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class CArosulSliderScreen extends StatefulWidget {
-  const CArosulSliderScreen({super.key});
+  // const CArosulSliderScreen({super.key});
+  final String productImage;
+
+  const CArosulSliderScreen({super.key, required this.productImage});
 
   @override
   State<CArosulSliderScreen> createState() => _CArosulSliderScreenState();
@@ -21,16 +24,7 @@ class _CArosulSliderScreenState extends State<CArosulSliderScreen> {
         CarouselSlider(
           items: [
             CarouslSliderWidget(
-              carouslSliderImage: appleWatchFor,
-            ),
-            CarouslSliderWidget(
-              carouslSliderImage: appleWatchThree,
-            ),
-            CarouslSliderWidget(
-              carouslSliderImage: appleWatchFor,
-            ),
-            CarouslSliderWidget(
-              carouslSliderImage: appleWatchThree,
+              carouslSliderImage: widget.productImage,
             ),
           ],
           options: CarouselOptions(

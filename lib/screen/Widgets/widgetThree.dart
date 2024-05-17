@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class WidgetThree extends StatefulWidget {
   // const WidgetThree({super.key});
-  IconData widgetIconThree;
+  final IconData widgetIconThree;
   WidgetThree({required this.widgetIconThree});
 
   @override

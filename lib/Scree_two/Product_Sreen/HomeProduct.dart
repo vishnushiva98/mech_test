@@ -1,14 +1,14 @@
+import 'package:e_comerce_application_2/Models/jsonModel.dart';
 import 'package:e_comerce_application_2/Scree_two/Product_Sreen/ProductCarousal.dart';
 import 'package:e_comerce_application_2/Scree_two/Product_Sreen/ProductDetails.dart';
 
 import 'package:flutter/material.dart';
 
-class ProductDetiles extends StatefulWidget {
-  @override
-  State<ProductDetiles> createState() => _ProductDetilesState();
-}
+class ProductDetiles extends StatelessWidget {
+  final Product product;
 
-class _ProductDetilesState extends State<ProductDetiles> {
+  const ProductDetiles({super.key, required this.product});
+
   // const ProductDetiles({super.key});
   @override
   Widget build(BuildContext context) {
@@ -30,8 +30,14 @@ class _ProductDetilesState extends State<ProductDetiles> {
       ),
       body: Column(
         children: [
-          ProductCarousal(),
-          ProductDetailsScreen(),
+          ProductCarousal(
+            productImagePass: product.image,
+          ),
+          ProductDetailsScreen(
+            productTitle: product.title,
+            productNewRate: '\$${product.price}',
+            productDescription: product.category.toString(),
+          ),
         ],
       ),
     );

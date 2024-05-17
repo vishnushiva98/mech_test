@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 class WidgetTwo extends StatelessWidget {
   // const WidgetTwo({super.key});
-  String imageTwo;
-  Color secondWgtColor;
+final  String imageTwo;
+ final Color secondWgtColor;
 
   WidgetTwo({
     required this.imageTwo,

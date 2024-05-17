@@ -10,7 +10,7 @@ class CarouslSliderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(carouslSliderImage);
+    return Image.network(carouslSliderImage);
   }
  
 }

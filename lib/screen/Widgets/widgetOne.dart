@@ -1,14 +1,12 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class WidgetOne extends StatelessWidget {
   // const WidgetOne({super.key});
-  String firstText;
-  FontWeight firstsize;
-  double firstFontSize;
-  Color firstColor;
+  final String firstText;
+  final FontWeight firstsize;
+  final double firstFontSize;
+  final Color firstColor;
 
   WidgetOne({
     required this.firstText,
@@ -23,6 +21,7 @@ class WidgetOne extends StatelessWidget {
       padding: const EdgeInsets.only(right: 5.0),
       child: Text(
         firstText,
+        // overflow: TextOverflow.,
         style: TextStyle(
           fontSize: firstFontSize,
           fontWeight: firstsize,

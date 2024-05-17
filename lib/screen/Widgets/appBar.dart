@@ -3,14 +3,15 @@ import 'package:flutter/material.dart';
 class AppBarWidget extends StatelessWidget {
   // const AppBarWidget({super.key});
 
-  IconData appBarIcon;
+ final IconData appBarIcon;
 
   AppBarWidget({required this.appBarIcon});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20.0, bottom: 30, right: 20),
+      padding:
+          const EdgeInsets.only(left: 20.0, bottom: 30, right: 20, top: 40),
       child: SizedBox(
         width: 35,
         height: 35,

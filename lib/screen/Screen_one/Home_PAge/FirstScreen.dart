@@ -8,7 +8,7 @@ import 'package:e_comerce_application_2/screen/Screen_one/Home_PAge/ProductCateg
 import 'package:flutter/material.dart';
 
 class HomeOne extends StatefulWidget {
-  // const HomeOne({super.key});
+  const HomeOne({super.key});
 
   @override
   State<HomeOne> createState() => _HomeOneState();
@@ -17,9 +17,9 @@ class HomeOne extends StatefulWidget {
 class _HomeOneState extends State<HomeOne> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(
-        children:  const [
+    return const Scaffold(
+      body: Column(
+        children:  [
           AppBarScreen(),
           HeaderScreen(),
           OffersScreen(),

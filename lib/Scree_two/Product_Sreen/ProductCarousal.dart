@@ -1,14 +1,12 @@
 import 'package:e_comerce_application_2/Scree_two/Product_Sreen/CarousalSliderScreen.dart';
 import 'package:flutter/material.dart';
 
-class ProductCarousal extends StatefulWidget {
-  const ProductCarousal({super.key});
+class ProductCarousal extends StatelessWidget {
+  // const ProductCarousal({super.key});
+  final String productImagePass;
 
-  @override
-  State<ProductCarousal> createState() => _ProductCarousalState();
-}
+  const ProductCarousal({super.key, required this.productImagePass});
 
-class _ProductCarousalState extends State<ProductCarousal> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +19,7 @@ class _ProductCarousalState extends State<ProductCarousal> {
               bottomLeft: Radius.circular(190))),
 
       // Calling CArosulSliderScreen
-      child: CArosulSliderScreen(),
+      child: CArosulSliderScreen(productImage:productImagePass ,),
     );
   }
 }

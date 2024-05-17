@@ -4,14 +4,20 @@ import 'package:e_comerce_application_2/Scree_two/Product_Widget/ProductScreenRo
 import 'package:e_comerce_application_2/screen/Widgets/widgetOne.dart';
 import 'package:flutter/material.dart';
 
-class ProductDetailsScreen extends StatefulWidget {
-  const ProductDetailsScreen({super.key});
+class ProductDetailsScreen extends StatelessWidget {
+  // const ProductDetailsScreen({super.key});
 
-  @override
-  State<ProductDetailsScreen> createState() => _ProductDetailsScreenState();
-}
+  final String productTitle;
+  final String productNewRate;
+  final String productDescription;
 
-class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
+  const ProductDetailsScreen({
+    super.key,
+    required this.productTitle,
+    required this.productNewRate,
+    required this.productDescription,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +27,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
           Row(
             children: [
               WidgetOne(
-                firstText: 'Apple Watch Series 6',
+                firstText: productTitle,
                 firstsize: FontWeight.w700,
                 firstColor: Colors.black,
                 firstFontSize: 18,
@@ -71,7 +77,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
           ),
           ScondScreenOne(
             oldRate: '\$200',
-            lastRate: '\$140',
+            lastRate: productNewRate,
           ),
           const Divider(
             height: 15,
@@ -91,13 +97,17 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       firstFontSize: 15,
                     ),
                   ),
-                  WidgetOne(
-                    firstText:
-                        'You can do so much with just Apple Watch and AirPods.\nTogether, they give you the power to take calls. Stream,\nmusic and podcasts. Hear incoming notifications.',
-                    firstsize: FontWeight.w600,
-                    firstColor: Color.fromARGB(255, 79, 78, 78),
-                    firstFontSize: 12,
-                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 5.0),
+                    child: Text(
+                      productDescription,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
                 ],
               )
             ],
